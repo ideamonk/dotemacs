@@ -43,7 +43,6 @@
 
 (desktop-save-mode 1)
 
-(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
 
 ;; Frame managements: resizing 'windows' (i.e., inside the frame) // flicked from http://goo.gl/V8ZVM
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -54,12 +53,18 @@
 (global-set-key (kbd "S-C-<return>") 'eval-buffer)
 
 
+
 ;; hack for html5 tags to zencoding
 
 ;; typically these should have zencoding capabilities like div#foo ->
 ;; expanding to <div id="foo" ... , but for now adding these as inline
 ;; tags
 
-(defvar zencoding-inline-tags 
-  (append zencoding-inline-tags 
-          '( "header" "nav" "section" "article" )))
+(defun add-html5-tags ()
+  "Adds a few html5 tags to zencoding-mode"
+  (defvar zencoding-inline-tags 
+    (append zencoding-inline-tags 
+          '( "header" "nav" "section" "article" "aside" "footer" ))))
+
+(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+(add-hook 'sgml-mode-hook 'add-html5-tags)
