@@ -56,10 +56,6 @@
 
 ;; hack for html5 tags to zencoding
 
-;; typically these should have zencoding capabilities like div#foo ->
-;; expanding to <div id="foo" ... , but for now adding these as inline
-;; tags
-
 (defun add-html5-tags ()
   "Adds a few html5 tags to zencoding-mode"
   (defvar zencoding-inline-tags 
