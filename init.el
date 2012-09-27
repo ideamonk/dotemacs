@@ -52,3 +52,14 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 (global-set-key (kbd "S-C-<return>") 'eval-buffer)
+
+
+;; hack for html5 tags to zencoding
+
+;; typically these should have zencoding capabilities like div#foo ->
+;; expanding to <div id="foo" ... , but for now adding these as inline
+;; tags
+
+(defvar zencoding-inline-tags 
+  (append zencoding-inline-tags 
+          '( "header" "nav" "section" "article" )
