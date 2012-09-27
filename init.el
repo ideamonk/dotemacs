@@ -62,4 +62,4 @@
 
 (defvar zencoding-inline-tags 
   (append zencoding-inline-tags 
-          '( "header" "nav" "section" "article" )
+          '( "header" "nav" "section" "article" )))
