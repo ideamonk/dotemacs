@@ -8,12 +8,19 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-ruby starter-kit-bindings)
+(defvar my-packages '(starter-kit starter-kit-ruby starter-kit-bindings starter-kit-js
+                                  scss-mode
+                                  color-theme
+                                  color-theme-sanityinc-tomorrow
+                                  color-theme-solarized
+                                  zencoding-mode 
+                                  )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,13 +39,14 @@
  ;; If there is more than one, they won't work right.
  )
 
-
 (set-face-background 'default "#161718")
 
 (desktop-save-mode 1)
 
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
-
-
 (add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+
+;; Frame managements: resizing 'windows' (i.e., inside the frame) // flicked from http://goo.gl/V8ZVM
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
