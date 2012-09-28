@@ -15,7 +15,6 @@
                                   zencoding-mode 
                                   markdown-mode
                                   rvm
-                                  nyan-mode
                                   )
   "A list of packages to ensure are installed at launch.")
 
@@ -56,6 +55,9 @@
 
 ;; font
 (set-frame-font "Menlo-12")
+
+;; line-height close to sublime text 2
+(setq-default line-spacing 3)
 
 ;; take ruby from rvm
 (rvm-use-default)
