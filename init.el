@@ -98,6 +98,12 @@
 ;; setup sentence highlight for markdown mode
 (require 'sentence-highlight)
 (add-hook 'markdown-mode-hook 'sentence-highlight-mode)
+;; TODO: with color-theme-is-global , new frames can be setup with different
+;; color schemes, a markdown could be hooked to open in a distraction 
+;; free super-big window with a color-theme in which normal text
+;; remains dim, while highlighted text appears bright, also perhaps
+;; one could hack some margins and paddings in that frame to make it
+;; more like iA Writer, perhaps fonts too, if possible
 
 ;; delete complete line on kill
 (global-set-key (kbd "C-k") 'kill-whole-line)
@@ -108,3 +114,5 @@
 
 ;; a bit darker, to ditto match our tomorrow-night theme in sublime text 2
 (set-face-background 'default "#161718")
+
+
