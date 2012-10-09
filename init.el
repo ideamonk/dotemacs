@@ -99,8 +99,8 @@
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ;; setup sentence highlight for markdown mode
-(require 'sentence-highlight)
-(add-hook 'markdown-mode-hook 'sentence-highlight-mode)
+;; (require 'sentence-highlight)
+;; (add-hook 'markdown-mode-hook 'sentence-highlight-mode)
 ;; TODO: with color-theme-is-global , new frames can be setup with different
 ;; color schemes, a markdown could be hooked to open in a distraction 
 ;; free super-big window with a color-theme in which normal text
