@@ -1,3 +1,5 @@
+;; TODO: organize into modules
+
 (require 'package)
 (add-to-list 'package-archives
                           '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -14,6 +16,8 @@
                                   zencoding-mode 
                                   markdown-mode
                                   rvm
+                                  clojure-mode
+                                  nrepl
                                   )
   "A list of packages to ensure are installed at launch.")
 
@@ -28,7 +32,6 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 (if window-system (set-exec-path-from-shell-PATH))
-
 
 ;; keep buffers from last session
 (desktop-save-mode 1)
@@ -115,4 +118,13 @@
 ;; a bit darker, to ditto match our tomorrow-night theme in sublime text 2
 (set-face-background 'default "#161718")
 
-
+;; real Emacs hackers don't use the arrow keys -  http://goo.gl/mZTL2
+(global-unset-key [up])
+(global-unset-key [down])
+(global-unset-key [left])
+(global-unset-key [right])
+;; use M-f and M-b instead
+(global-unset-key [M-left])
+(global-unset-key [M-right])
+;; don't need mail
+(global-unset-key (kbd "C-x m"))
