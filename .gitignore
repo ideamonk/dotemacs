@@ -7,3 +7,8 @@ backups
 eshell
 places*
 url
+bookmarks
+repl-port
+saved-places*
+.#.gitignore
+.emacs.desktop

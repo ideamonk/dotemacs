@@ -59,7 +59,7 @@
 (set-frame-font "Menlo-12")
 
 ;; line-height close to sublime text 2
-(setq-default line-spacing 3)
+(setq-default line-spacing 1)
 
 ;; take ruby from rvm
 (rvm-use-default)
@@ -128,3 +128,12 @@
 (global-unset-key [M-right])
 ;; don't need mail
 (global-unset-key (kbd "C-x m"))
+
+;; save place in files between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
+
+;; org mode for org files
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(add-hook 'org-mode-hook 'org-indent-mode)
