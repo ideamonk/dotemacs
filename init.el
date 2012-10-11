@@ -137,6 +137,7 @@
 ;; org mode for org files
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'org-indent-mode)
+(add-hook 'org-mode-hook (lambda () (flyspell-mode -1)))
 
 ;; start server
 (server-start)
