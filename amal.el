@@ -5,8 +5,6 @@
 ;; bookmarks location
 (setq bookmark-default-file "~/.emacs.d/.bookmarks.amal")
 
-;; save place in files between sessions
-(require 'saveplace)
-(setq-default save-place t)
+;; place file
 (setq save-place-file "~/.emacs.d/.saved-places.amal")
 

@@ -137,3 +137,6 @@
 ;; start server
 (server-start)
 
+;; save places between files
+(require 'saveplace)
+(setq-default save-place t)
