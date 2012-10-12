@@ -140,3 +140,8 @@
 ;; save places between files
 (require 'saveplace)
 (setq-default save-place t)
+
+;; more distinguished active mode-line, dim inactive ones
+(set-face-background 'modeline          "#472a43")
+(set-face-background 'modeline-inactive          "#1a1a1a")
+(set-face-foreground 'modeline-inactive          "#777777")
