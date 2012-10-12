@@ -9,6 +9,8 @@ places*
 url
 bookmarks
 repl-port
-saved-places*
+.saved-places*
 .#.gitignore
 .emacs.desktop
+.bookmarks.amal
+.bookmarks.ideamonk
