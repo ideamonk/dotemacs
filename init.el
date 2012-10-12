@@ -42,9 +42,7 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
-
-;; quick eval-buffer
-(global-set-key (kbd "S-C-<return>") 'eval-buffer)
+;; ^ TODO interferes with Org mode
 
 ;; hack for html5 tags to zencoding
 (defun add-html5-tags ()
