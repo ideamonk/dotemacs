@@ -145,3 +145,12 @@
 (set-face-background 'modeline          "#472a43")
 (set-face-background 'modeline-inactive          "#1a1a1a")
 (set-face-foreground 'modeline-inactive          "#777777")
+
+(defun sicp-night ()
+  "focus reading that doesn't hurt eyes"
+  (require 'sentence-highlight)
+  (set-foreground-color "#666666")
+  (set-face-foreground 'font-lock-keyword-face "#aaaaaa")
+  (sentence-highlight-mode))
+
+(add-hook 'texinfo-mode 'sicp-night)
