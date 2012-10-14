@@ -153,3 +153,17 @@
   (sentence-highlight-mode))
 
 (add-hook 'texinfo-mode 'sicp-night)
+
+(setq initial-scratch-message "
+;;
+;; '-._                  ___.....___
+;;     `.__           ,-'        ,-.`-,            HAVE YOU READ
+;;         `''-------'          ( p )  `._       YOUR ABELSON AND
+;;                               `-'      \\       SUSSMAN TODAY ?
+;;                                         \\
+;;                               .         \\  
+;;                                \\---..,--'
+;;    ................._           --...--,
+;;                      `-.._         _.-'
+;;                           `'-----''
+")
