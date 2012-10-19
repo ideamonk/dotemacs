@@ -1,17 +1,6 @@
-# name: ns
-# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
-# key: ns
+#name: ns
 # --
-(ns `(let* ((nsname '())
-        (dirs (split-string (buffer-file-name) "/"))
-        (aftersrc nil))
-     (dolist (dir dirs)
-        (if aftersrc
-            (progn
-                (setq nsname (cons dir nsname))
-                (setq nsname (cons "." nsname)))
-             (when (or (string= dir "src") (string= dir "test"))
-                (setq aftersrc t))))
-     (when nsname
-       (replace-regexp-in-string "_" "-" (substring (apply 'concat (reverse nsname))  0 -5))))`
-     "${1:Short package description.}"$0)
+(ns ^{:doc "${1:doc-string}"
+      :author "Baishampayan Ghose <b.ghose@helpshift.com>"}
+  ${2:name}
+  $0)
