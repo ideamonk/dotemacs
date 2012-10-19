@@ -21,11 +21,6 @@
 (when (eq system-type 'darwin)
   (setq system-name (car (split-string system-name "\\."))))
 
-;;; frames
-(setq initial-frame-alist '((top . 0)
-                            (left . 0)
-                            (width . 155)
-                            (height . 45)))
 (setq frame-title-format "%b")
 (setq icon-title-format  "%b")
 

@@ -1,8 +1,8 @@
-;;; tomorrow-night-bright-theme.el --- custom theme for faces
+;;; tomorrow-night-blue-theme.el --- custom theme for faces
 
 ;;; Commentary:
 ;;
-;;; Tomorrow Night Bright Theme
+;;; Tomorrow Night Blue Theme
 ;;
 ;; Originally by Chris Kempson https://github.com/ChrisKempson/Tomorrow-Theme
 ;; Ported to GNU Emacs by Chris Charles
@@ -10,25 +10,25 @@
 
 ;;; Code:
 
-(deftheme tomorrow-night-bright
+(deftheme tomorrow-night-blue
   "A Pastel Coloured Theme")
 
-(let ((background "#000000")
-      (current-line "#2a2a2a")
-      (selection "#424242")
-      (foreground "#eaeaea")
-      (comment "#969896")
-      (cursor "#9f9f9f")
-      (red "#d54e53")
-      (orange "#e78c45")
-      (yellow "#e7c547")
-      (green "#b9ca4a")
-      (aqua "#70c0b1")
-      (blue "#7aa6da")
-      (purple "#c397d8"))
+(let ((background "#002451")
+      (current-line "#00346e")
+      (selection "#003f8e")
+      (foreground "#ffffff")
+      (comment "#7285b7")
+      (cursor "#ffffff")
+      (red "#ff9da4")
+      (orange "#ffc58f")
+      (yellow "#ffeead")
+      (green "#d1f1a9")
+      (aqua "#99ffff")
+      (blue "#bbdaff")
+      (purple "#ebbbff"))
 
   (custom-theme-set-faces
-   'tomorrow-night-bright
+   'tomorrow-night-blue
 
    ;; Built-in stuff (Emacs 23)
    `(default ((t (:background ,background :foreground ,foreground))))
@@ -77,7 +77,7 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,foreground)))))
 
   (custom-theme-set-variables
-   'tomorrow-night-bright
+   'tomorrow-night-blue
 
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
@@ -86,6 +86,6 @@
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
-(provide-theme 'tomorrow-night-bright)
+(provide-theme 'tomorrow-night-blue)
 
-;;; tomorrow-night-bright-theme.el ends here
+;;; tomorrow-night-blue-theme.el ends here

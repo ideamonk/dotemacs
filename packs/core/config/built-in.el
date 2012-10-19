@@ -130,3 +130,21 @@
 
 ;; don't need mail
 (global-unset-key (kbd "C-x m"))
+
+
+;;
+
+;;; setup revive
+(autoload 'save-current-configuration "revive" "Save status" t)
+(autoload 'resume "revive" "Resume Emacs" t)
+(autoload 'wipe "revive" "Wipe Emacs" t)
+;; bindings for doing it manually
+(define-key ctl-x-map "S" 'save-current-configuration)
+(define-key ctl-x-map "F" 'resume)
+(define-key ctl-x-map "K" 'wipe)
+;; lets get some sublime text 2 pleasures back
+;; save config before quitting
+(add-hook 'kill-emacs-hook 'save-current-configuration)
+;; restore config once up
+(resume)
+;; WARN - always save config before evaling init.el
