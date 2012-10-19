@@ -18,3 +18,5 @@
 
 ;; http://orgmode.org/manual/Setting-up-capture.html
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
+
+(add-hook 'org-mode-hook 'org-indent-mode)
