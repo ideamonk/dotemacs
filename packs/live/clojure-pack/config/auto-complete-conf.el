@@ -30,6 +30,7 @@
 
 
 ;;;;Key triggers
+(ac-set-trigger-key "TAB")
 (define-key ac-completing-map (kbd "C-M-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-M-p") 'ac-previous)
 (define-key ac-completing-map "\t" 'ac-complete)
