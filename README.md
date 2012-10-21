@@ -1,3 +1,5 @@
+NOTE: this is a mixup of emacs-live + ghoseb/dotemacs + my own stuff
+
 <img src="http://github.com/downloads/overtone/emacs-live/emacs-live.png" />
 
 <!--
