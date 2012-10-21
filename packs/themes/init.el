@@ -19,3 +19,5 @@
 ;;       (setq hcz-set-cursor-color-buffer (buffer-name)))))
 
 ;; (add-hook 'post-command-hook 'my-set-cursor-color)
+
+(set-cursor-color "yellow")
