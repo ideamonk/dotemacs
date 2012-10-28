@@ -110,16 +110,16 @@
 ;; delete complete line on kill
 (global-set-key (kbd "C-k") 'kill-whole-line)
 
-;; use the real(tm) tomorrow theme, not the sanytyinc package
+(require 'color-theme-tomorrow)
+
 (if window-system
-    ((require 'color-theme-tomorrow)
-     (color-theme-tomorrow-real 'night)
-     ;; more close to sublime text 2
-     (set-face-background 'default "#161718")
-     ;; more distinguished active mode-line, dim inactive ones
-     (set-face-background 'modeline          "#472a43")
-     (set-face-background 'modeline-inactive "#1a1a1a")
-     (set-face-foreground 'modeline-inactive "#777777")))
+    (color-theme-tomorrow-real 'night)
+    ;; more close to sublime text 2
+    (set-face-background 'default "#161718")
+    ;; more distinguished active mode-line, dim inactive ones
+    (set-face-background 'modeline          "#472a43")
+    (set-face-background 'modeline-inactive "#1a1a1a")
+    (set-face-foreground 'modeline-inactive "#777777"))
 
 ;; real Emacs hackers don't use the arrow keys -  http://goo.gl/mZTL2
 (global-unset-key [up])
